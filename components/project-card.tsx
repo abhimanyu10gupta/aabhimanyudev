@@ -35,12 +35,12 @@ export function ProjectCard({ title, description, tags, image, link }: ProjectCa
       <div className="flex md:grid md:grid-cols-2 h-full">
         <div className="md:relative">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-background z-10 opacity-30 group-hover:opacity-10 transition-opacity duration-500"></div>
-          <Image
+          {/* <Image
             src={image || "/placeholder.svg"}
             alt={title}
             fill
             className="object-cover opacity-70 group-hover:opacity-90 transition-all duration-500 filter saturate-50 group-hover:saturate-100"
-          />
+          /> */}
         </div>
 
         <div className="p-4 relative z-10 flex flex-col justify-between h-full">

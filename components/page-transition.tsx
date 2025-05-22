@@ -65,7 +65,7 @@ export function PageTransition({ children }: PageTransitionProps) {
       x: 0,
       opacity: 1,
       transition: {
-        x: { type: "spring", stiffness: 100, damping: 30 },
+        x: { type: "spring", stiffness: 200, damping: 50 },
         opacity: { duration: 0.7 }
       }
     },
@@ -73,7 +73,7 @@ export function PageTransition({ children }: PageTransitionProps) {
   }
 
   return (
-    <div className="w-full h-full overflow-hidden touch-pan-y relative">
+    <div className="w-full h-full overflow-y-auto touch-pan-y relative">
       <motion.div
         className="w-full h-full"
         drag="x"

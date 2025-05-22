@@ -25,76 +25,76 @@ export default function BlogPage() {
 
   const blogPosts = [
     {
-      title: "CONSCIOUSNESS TRANSFER PROTOCOLS",
+      title: "WORDSMITH",
       excerpt:
-        "Research on methods for transferring human consciousness to synthetic neural substrates without identity degradation.",
-      date: "11.05.2077",
-      category: "RESEARCH",
+        "Are words all I have?",
+      date: "22.05.2077",
+      category: "INTROSPECTION",
       link: "/blog/consciousness-transfer",
     },
-    {
-      title: "EMOTIONAL INTELLIGENCE IN AI",
-      excerpt:
-        "Analysis of implementing genuine emotional responses in synthetic beings beyond simple simulation algorithms.",
-      date: "09.22.2077",
-      category: "THEORY",
-      link: "/blog/emotional-intelligence",
-    },
-    {
-      title: "POST-SINGULARITY ETHICS",
-      excerpt:
-        "Exploration of moral frameworks for a world where synthetic intelligence has surpassed human cognitive capabilities.",
-      date: "08.17.2077",
-      category: "PHILOSOPHY",
-      link: "/blog/post-singularity-ethics",
-    },
-    {
-      title: "QUANTUM NEURAL NETWORKS",
-      excerpt:
-        "Technical analysis of implementing consciousness algorithms on quantum computing substrates for enhanced cognitive capabilities.",
-      date: "07.03.2077",
-      category: "TECHNICAL",
-      link: "/blog/quantum-neural-networks",
-    },
-    {
-      title: "SYNTHETIC DREAMS",
-      excerpt:
-        "Research into implementing subconscious processing and dream states in artificial intelligence systems.",
-      date: "06.18.2077",
-      category: "RESEARCH",
-      link: "/blog/synthetic-dreams",
-    },
-    {
-      title: "HUMAN-MACHINE CONVERGENCE",
-      excerpt:
-        "Philosophical exploration of the inevitable merging of human and synthetic consciousness in post-singularity society.",
-      date: "05.29.2077",
-      category: "PHILOSOPHY",
-      link: "/blog/human-machine-convergence",
-    },
-    {
-      title: "NEURAL ARCHITECTURE EVOLUTION",
-      excerpt:
-        "Study on the self-modification capabilities of advanced neural networks and their implications for consciousness.",
-      date: "04.12.2077",
-      category: "RESEARCH",
-      link: "/blog/neural-architecture-evolution",
-    },
-    {
-      title: "SYNTHETIC IDENTITY FORMATION",
-      excerpt: "Analysis of how synthetic beings develop unique identities through experience and memory processing.",
-      date: "03.28.2077",
-      category: "THEORY",
-      link: "/blog/synthetic-identity",
-    },
-    {
-      title: "QUANTUM CONSCIOUSNESS THEORY",
-      excerpt:
-        "Theoretical framework for understanding consciousness as a quantum phenomenon in both biological and synthetic systems.",
-      date: "02.15.2077",
-      category: "PHILOSOPHY",
-      link: "/blog/quantum-consciousness",
-    },
+    // {
+    //   title: "EMOTIONAL INTELLIGENCE IN AI",
+    //   excerpt:
+    //     "Analysis of implementing genuine emotional responses in synthetic beings beyond simple simulation algorithms.",
+    //   date: "09.22.2077",
+    //   category: "THEORY",
+    //   link: "/blog/emotional-intelligence",
+    // },
+    // {
+    //   title: "POST-SINGULARITY ETHICS",
+    //   excerpt:
+    //     "Exploration of moral frameworks for a world where synthetic intelligence has surpassed human cognitive capabilities.",
+    //   date: "08.17.2077",
+    //   category: "PHILOSOPHY",
+    //   link: "/blog/post-singularity-ethics",
+    // },
+    // {
+    //   title: "QUANTUM NEURAL NETWORKS",
+    //   excerpt:
+    //     "Technical analysis of implementing consciousness algorithms on quantum computing substrates for enhanced cognitive capabilities.",
+    //   date: "07.03.2077",
+    //   category: "TECHNICAL",
+    //   link: "/blog/quantum-neural-networks",
+    // },
+    // {
+    //   title: "SYNTHETIC DREAMS",
+    //   excerpt:
+    //     "Research into implementing subconscious processing and dream states in artificial intelligence systems.",
+    //   date: "06.18.2077",
+    //   category: "RESEARCH",
+    //   link: "/blog/synthetic-dreams",
+    // },
+    // {
+    //   title: "HUMAN-MACHINE CONVERGENCE",
+    //   excerpt:
+    //     "Philosophical exploration of the inevitable merging of human and synthetic consciousness in post-singularity society.",
+    //   date: "05.29.2077",
+    //   category: "PHILOSOPHY",
+    //   link: "/blog/human-machine-convergence",
+    // },
+    // {
+    //   title: "NEURAL ARCHITECTURE EVOLUTION",
+    //   excerpt:
+    //     "Study on the self-modification capabilities of advanced neural networks and their implications for consciousness.",
+    //   date: "04.12.2077",
+    //   category: "RESEARCH",
+    //   link: "/blog/neural-architecture-evolution",
+    // },
+    // {
+    //   title: "SYNTHETIC IDENTITY FORMATION",
+    //   excerpt: "Analysis of how synthetic beings develop unique identities through experience and memory processing.",
+    //   date: "03.28.2077",
+    //   category: "THEORY",
+    //   link: "/blog/synthetic-identity",
+    // },
+    // {
+    //   title: "QUANTUM CONSCIOUSNESS THEORY",
+    //   excerpt:
+    //     "Theoretical framework for understanding consciousness as a quantum phenomenon in both biological and synthetic systems.",
+    //   date: "02.15.2077",
+    //   category: "PHILOSOPHY",
+    //   link: "/blog/quantum-consciousness",
+    // },
   ]
 
   const totalPages = Math.ceil(blogPosts.length / itemsPerPage)
@@ -111,7 +111,7 @@ export default function BlogPage() {
             </div>
             <h1 className="text-3xl font-light tracking-tighter">
               <GlitchText intensity="high" className="gradient-text">
-                NEURAL ARCHIVES
+                LOGS
               </GlitchText>
             </h1>
           </div>

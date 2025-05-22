@@ -20,11 +20,13 @@ export function ChatWindow() {
       setIsProcessing(true)
       const timer = setTimeout(() => {
         const responses = [
-          "Analyzing neural patterns... I've detected an interesting correlation in your query.",
-          "Processing request... Your question touches on advanced synthetic consciousness theory.",
-          "Accessing knowledge base... I have several relevant data points to share with you.",
-          "Neural connection established. I understand what you're asking about.",
-          "Query processed successfully. Here's what I can tell you about that topic.",
+          "I thought about connecting my journal and projects to this chat via llms but it seemingly requires some work and everytime you chat I'll get billed. So, I'll get to it later." +
+          "I might just connect it to a an open channel on my telegram Bot... would need a server to run it. So feel free to text me in a couple weeks Anon.",
+          // "Analyzing neural patterns... I've detected an interesting correlation in your query.",
+          // "Processing request... Your question touches on advanced synthetic consciousness theory.",
+          // "Accessing knowledge base... I have several relevant data points to share with you.",
+          // "Neural connection established. I understand what you're asking about.",
+          // "Query processed successfully. Here's what I can tell you about that topic.",
         ]
 
         addMessage({

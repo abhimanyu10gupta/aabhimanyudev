@@ -34,8 +34,8 @@ const blogData = {
 
 export default function BlogArticle() {
   return (
-    <div className="h-[calc(100vh-8rem)] flex items-center justify-center">
-      <div className="container px-4 md:px-6 relative z-10">
+    <div className="flex items-center justify-center">
+      <div className="container py-4 pb-32 px-4 md:px-6 relative z-10 ">
         <div className="flex flex-col items-center">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-8 relative z-10">
             <div className="flex items-center space-x-2 mb-2">

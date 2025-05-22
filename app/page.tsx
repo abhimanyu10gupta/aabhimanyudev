@@ -4,7 +4,7 @@ import { HolographicCard } from "@/components/holographic-card"
 
 export default function Home() {
   return (
-    <div className="h-[calc(100vh-8rem)] flex items-center justify-center">
+    <div className="h-[calc(100vh-12rem)] flex items-center justify-center">
       <div className="container px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           {/* Main Content - Centered Layout */}
@@ -24,7 +24,7 @@ export default function Home() {
                 <span className="text-xs tracking-widest text-foreground/60">SOFTWARE ENGINEER</span>
               </div>
               <p className="max-w-[700px] text-foreground/80 md:text-xl font-light tracking-wide leading-relaxed">
-                NEURAL ARCHITECT <span className="text-primary">|</span> SYNTHETIC INTELLIGENCE ENGINEER
+                SOFTWARE ENGINEER <span className="text-primary">|</span> APPLICATION DEVELOPER <span className="text-primary">|</span> SYSTEMS ARCHITECT
               </p>
             </div>
 
@@ -34,29 +34,29 @@ export default function Home() {
             {/* Holographic Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
               <HolographicCard
-                title="NEURAL CONSTRUCTS"
-                description="Explore my synthetic intelligence projects"
+                title="CONSTRUCTS"
+                description="Explore my projects"
                 icon="BrainCircuit"
                 link="/projects"
               />
               <HolographicCard
-                title="THOUGHT ARCHIVES"
+                title="THOUGHTS"
                 description="Access my research logs and insights"
                 icon="FileText"
                 link="/blog"
               />
               <HolographicCard
-                title="NEURAL INSTRUMENTS"
-                description="Specialized tools for synthetic intelligence"
+                title="TOOLS"
+                description="Specialized tools for random stuff"
                 icon="Code"
                 link="/tools"
               />
-              <HolographicCard
+              {/* <HolographicCard
                 title="CONTACT INTERFACE"
                 description="Establish a neural connection"
                 icon="BrainCircuit"
                 link="/contact"
-              />
+              /> */}
             </div>
           </div>
         </div>
