@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { BrainCircuit, FileText, Code, ArrowUpRight } from "lucide-react"
+import { GlitchText } from "./glitch-text"
 
 interface HolographicCardProps {
   title: string
@@ -48,7 +49,7 @@ export function HolographicCard({ title, description, icon, link }: HolographicC
               <div className="h-6 w-6 flex items-center justify-center bg-primary/10 border border-primary/20 text-primary/80">
                 {getIcon()}
               </div>
-              <span className="text-xs tracking-wider text-foreground/60">{title}</span>
+              <span className="text-xs tracking-wider text-foreground/60"><GlitchText intensity="low">{title}</GlitchText></span>
             </div>
             <ArrowUpRight
               className={`h-4 w-4 transition-opacity duration-300 ${isHovered ? "opacity-100 text-primary" : "opacity-0"}`}

@@ -5,7 +5,30 @@ import { BlogPostCard } from "@/components/blog-post-card"
 import { GlitchText } from "@/components/glitch-text"
 import { Pagination } from "@/components/pagination"
 
+
+// async function getBlogPosts() {
+//   const response = await notion.databases.query({
+//     database_id: BLOG_DATABASE_ID!,
+//     filter: {
+//       property: "Published",
+//       checkbox: { equals: true },
+//     },
+//     sorts: [{ property: "Date", direction: "descending" }],
+//   })
+
+//   return response.results.map((page: any) => ({
+    
+//     title: page.properties.Title.title[0]?.plain_text || "Untitled",
+//     excerpt: page.properties.Excerpt.rich_text[0]?.plain_text || "",
+//     date: page.properties.Date.date?.start || "",
+//     category: page.properties.Category.select?.name || "",
+//     link: "/blog/" + page.properties.Slug.rich_text[0]?.plain_text,
+//   }))
+// }
+
 export default function BlogPage() {
+  const [blogPosts, setBlogPosts] = useState<any[]>([])
+
   const [currentPage, setCurrentPage] = useState(1)
   const [itemsPerPage, setItemsPerPage] = useState(4)
 
@@ -19,19 +42,27 @@ export default function BlogPage() {
     }
     updateItemsPerPage()
     window.addEventListener("resize", updateItemsPerPage)
+
+    
     return () => window.removeEventListener("resize", updateItemsPerPage)
   }, [])
 
+  useEffect(() => {
+    fetch("/api/get-blog-posts")
+      .then(res => res.json())
+      .then(data => setBlogPosts(data))
+  }, [])
 
-  const blogPosts = [
-    {
-      title: "WORDSMITH",
-      excerpt:
-        "Are words all I have?",
-      date: "22.05.2077",
-      category: "INTROSPECTION",
-      link: "/blog/consciousness-transfer",
-    },
+
+  // const blogPosts = [
+  //   {
+  //     title: "The Mask of Eloquence",
+  //     excerpt:
+  //       "Are words all I have?",
+  //     date: "22.05.2077",
+  //     category: "INTROSPECTION",
+  //     link: "/blog/consciousness-transfer",
+  //   },
     // {
     //   title: "EMOTIONAL INTELLIGENCE IN AI",
     //   excerpt:
@@ -95,11 +126,11 @@ export default function BlogPage() {
     //   category: "PHILOSOPHY",
     //   link: "/blog/quantum-consciousness",
     // },
-  ]
+  // ]
 
   const totalPages = Math.ceil(blogPosts.length / itemsPerPage)
   const currentPosts = blogPosts.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
-
+  console.log(blogPosts)
   return (
     <div className="h-[calc(100vh-8rem)] flex items-center justify-center">
       <div className="container px-4 md:px-6 relative z-10">
