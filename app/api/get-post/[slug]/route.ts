@@ -14,7 +14,6 @@ const notionClient = new NotionAPI()
 export async function GET(req: NextRequest, { params }: { params: { slug: string } }) {
   try { 
     const slug = await params.slug
-  console.log("slug is herereeeee:", slug)
   // Step 1: Query Notion database for the page with matching slug
   const dbRes = await notion.databases.query({
     database_id: BLOG_DATABASE_ID!,
@@ -25,16 +24,13 @@ export async function GET(req: NextRequest, { params }: { params: { slug: string
       },
     },
   })
-  console.log(dbRes)
   if (!dbRes.results.length)
     return NextResponse.json({ error: "Not found" }, { status: 404 })
 
   // Type assert result safely
   const page = dbRes.results[0] as PageObjectResponse
-  console.log("PAGEID::::::",page.id)
   const pageId = page.id
 
-  console.log("pageID part 2:", pageId)
 
   // Step 2: Get full Notion content for the page
   const recordMap = await notionClient.getPage(pageId)

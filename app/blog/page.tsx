@@ -130,7 +130,6 @@ export default function BlogPage() {
 
   const totalPages = Math.ceil(blogPosts.length / itemsPerPage)
   const currentPosts = blogPosts.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
-  console.log(blogPosts)
   return (
     <div className="h-[calc(100vh-8rem)] flex items-center justify-center">
       <div className="container px-4 md:px-6 relative z-10">
