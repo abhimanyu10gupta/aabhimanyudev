@@ -15,6 +15,8 @@ import Home from "./page"
 import Projects from "./projects/page"
 import Blog from "./blog/page"
 import Tools from "./tools/page"
+import { Analytics } from "@vercel/analytics/next"
+
 import { PageCarousel } from "@/components/PageCarousel"
 import { PageTransition2 } from "@/components/page-transition2"
 const inter = Inter({
@@ -50,7 +52,10 @@ export default function RootLayout({
               <ConstellationAnimation />
               <Navbar />
               <PageTransition>
-                <main className="flex-1 relative pt-16 pb-16 pt-12 pb-12 max-h-[calc(100vh-4rem-4rem)] xs:pt-20 xs:pb-20 xs:max-h-[calc(100vh-5rem-5rem)]">{children}</main>
+                <main className="flex-1 relative pt-16 pb-16 pt-12 pb-12 max-h-[calc(100vh-4rem-4rem)] xs:pt-20 xs:pb-20 xs:max-h-[calc(100vh-5rem-5rem)]">
+                  {children}
+                  <Analytics />
+                </main>
               </PageTransition>
               <Footer />
               <ChatInterface />
